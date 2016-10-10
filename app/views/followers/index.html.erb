@@ -1,3 +1,6 @@
 <% @display_followers.each do |follower| %>
-  <p><%= follower.name %></p>
+<ul>
+  <li><%= follower.name %></li>
+  <li><a href="<%= follower.url %>"></li>
+</ul>
 <% end %>

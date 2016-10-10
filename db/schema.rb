@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161009220022) do
     t.string   "uid"
     t.string   "name"
     t.string   "screen_name"
+    t.string   "url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

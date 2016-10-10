@@ -4,8 +4,7 @@ class CreateFollowers < ActiveRecord::Migration
       t.string :uid
       t.string :name
       t.string :screen_name
-      # t.string :image_url
-      # t.string :url
+      t.string :url
 
       t.timestamps null: false
     end
