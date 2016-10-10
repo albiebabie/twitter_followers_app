@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>TwitterFollowersApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= link_to 'Twitter', '/auth/twitter/' %>
-  <%= link_to 'Sign Out', sign_out_path, method: :delete %>
-  <div class="container">
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>">
-        <%= value %>
-      </div>
-    <% end %>
-    <% console %>
-    <%= yield %>
-  </div>
-</body>
+  <head>
+    <title>TwitterFollowersApp</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= link_to 'Twitter', '/auth/twitter/' %>
+    <%= link_to 'Sign Out', sign_out_path, method: :delete %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
 </html>
