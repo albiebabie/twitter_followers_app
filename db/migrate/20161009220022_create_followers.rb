@@ -3,6 +3,7 @@ class CreateFollowers < ActiveRecord::Migration
     create_table :followers do |t|
       t.string :uid
       t.string :name
+      t.string :screen_name
       # t.string :image_url
       # t.string :url
 

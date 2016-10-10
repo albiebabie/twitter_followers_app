@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20161009220022) do
   create_table "followers", force: :cascade do |t|
     t.string   "uid"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "screen_name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
