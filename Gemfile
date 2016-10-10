@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'ruby'
 gem 'twitter'
 gem 'omniauth-twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -49,4 +51,8 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
