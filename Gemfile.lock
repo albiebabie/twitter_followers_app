@@ -137,6 +137,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.7.1)
       actionpack (= 4.2.7.1)
       activesupport (= 4.2.7.1)
@@ -162,6 +167,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    ruby (0.1.0)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -226,7 +232,9 @@ DEPENDENCIES
   omniauth-twitter
   pg (~> 0.15)
   rails (= 4.2.7.1)
+  rails_12factor
   rspec-rails
+  ruby
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
