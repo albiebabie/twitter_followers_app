@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
-  has_many :followers
-  
+  has_many :followers, dependent: :destroy
+
   def self.from_omniauth(auth_hash)
     user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create
     user.update(
