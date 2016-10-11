@@ -7,19 +7,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if current_user %>
-      <%= link_to 'Sign Out', sign_out_path, method: :delete %>
-      <div class="container">
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key %>">
-            <%= value %>
-          </div>
-        <% end %>
-        <%= yield %>
-      </div>
-    <% else %>
-      Please Sign In with Twitter
-      <%= link_to 'Twitter', '/auth/twitter/' %>
-    <% end %>
+    <%= link_to 'Twitter', '/auth/twitter/' %>
+    <%= link_to 'Sign Out', sign_out_path, method: :delete %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
