@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+  root 'followers#index'
 
   resources :users do
     resources :followers
