@@ -2,7 +2,9 @@
   <div class="page-header">
     <h1>Hi <%= current_user.name %></h1>
     <%= image_tag current_user.image_url %>
+    <br>
     <a href="<%= current_user.url %>">Go to Twitter</a>
+    <br>
+    <%= link_to "Followers List", user_followers_path(current_user) %>
   </div>
-  <%= link_to "Followers", user_followers_path(current_user) %>
 <% end %>

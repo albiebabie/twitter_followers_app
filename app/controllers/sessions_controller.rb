@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
     session[:access_token] = auth_hash_credentials.token
     session[:access_token_secret] = auth_hash_credentials.secret
-    flash[:success] = "Welcome, #{@user.name}!"
     redirect_to root_path
   end
 
